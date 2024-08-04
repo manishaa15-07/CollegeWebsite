@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <style>
+        .form1{
+            margin: auto;
+            width: 1500px;
+            border: 2px rgb(148, 148, 226) solid;
+            box-shadow: 3px 3px 3px 3px ;
+        }
+        .head{
+            padding-top: 50px;
+            height: 100px;
+            margin-bottom: 80px;
+            text-align: center;
+            font-size: 3.5rem;
+            background-color: rgb(83, 215, 215);
+        }
+        .name{
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            font-size: 2rem;
+        }
+        .i{
+            margin-left:50px ;
+            transform: scale(2);
+        }
+        .input{
+            margin-left: 50px;
+            width: 400px;
+            height: 50px;
+            border: 2px solid rgb(146, 137, 137);
+            font-size: 30px;  
+        }
+        #male{
+            margin-left: 100px;
+        }
+         #city{
+            margin-right: 80px;      
+           }
+        #course{
+            width: 500px;
+            height: 80px;
+        }
+        .phoneemail{
+            margin-bottom: 0px;
+        }
+        .error{
+            margin-top:20px;
+            font-size: 2rem;
+            color: red;
+            margin-left: 400px;
+            margin-bottom: 100px;
+        }
+        #submit{
+            font-size: 1.8rem;
+            margin-left: 500px ;
+            background-color: red;
+            width: 200px;
+            height: 80px;
+            border: 2px solid black;
+            border-radius: 25px;
+        }
+        .last{
+            margin-top: 50px;
+            display: inline-block;
+        }
+        #clear{
+            font-size: 1.8rem;
+            background-color: white;
+            width: 170px;
+            height: 80px;
+            border: 2px solid black;
+            border-radius: 25px; margin-left: 50px;
+        }
+        .i{
+            width: 35px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <form class="form1" onsubmit="return validateform()">  
+          <div class="head">REGISTRATION FORM</div>
+            <div class="name">
+                FIRSTNAME :<input type="text" class="input" id="fname">
+                </div>
+             <div class="name">MIDDLENAME : <input type="text" class="input" id="mname"></div>   
+             <div class="name">LASTNAME : <input type="text" class="input" id="lname">
+                </div>
+           
+            <div class="name gender" >GENDER :
+            <input type="radio" class="i" id="male" name="GENDER" value="MALE">MALE
+             <input type="radio" class="i" id="female" name="GENDER" value="FEMALE">   FEMALE   
+            </div>
+            <div class=" name" id="dob">
+                D.O.B : <input type="date" class="input" id="db" >
+            </div>
+           <div class="name" id="address">
+                ADDRESS : <input type="text" class="input" id="texxt">
+            </div>
+            <div class="name phoneemail" id="phone">
+                PHONE NO. : <input type="text" class="input" id="texxt">
+            </div>
+            <p class="error" id="error2"></p>
+            <div class="name">
+                CITY : <input type="text" class="input" id="city"> 
+                 STATE  : <input type="text" class="input" id="state">
+            </div>
+                <div class="name">
+                    PINCODE : <input type="text" class="input" id="pin">
+                </div>
+                <div class="name phoneemail">
+                    EMAIL ID  : <input type="text" class="input" id="email">
+                </div>
+                <p id="error1" class="error"></p>
+                <div class="name">
+                    CREATE PASSWORD :<input type="password" class="input" id="pass">
+                </div>
+                <div class="name">
+                    CONFIRM PASSWORD :<input type="password" class="input" id="cp">
+                </div>
+                <div class="name">
+                  COURSE  :
+                  <select name ="course" class="name" id="course">
+                    <option value="B.Sc">--select--</option>
+                    <option value="B.Sc">B.Sc</option>
+                     <option value="M.Sc" >M.Sc</option>
+                     <option value="B.A">B.A</option>
+                     <option value="B.Com">B.Com</option>
+                     <option value="M.A">M.A</option>
+                     <option value="B.Voc">B.Voc</option>
+                     <option value="BCA">BCA</option>
+                     <option value="MSW">MSW</option>
+                     <option value="BBA">BBA</option>
+                     <option value="M.Com">M.Com</option>
+                     <option value="PG Diploma">PG Diploma</option>
+                     <option value="Certificate">Certificate</option>
+                     <option value="B.Com(HONS)">B.Com(Hons)</option>
+                     <option value="BSW">BSW</option>
+                  </select>
+                </div>
+
+                <div class="name last">
+                  <button id="submit">SUBMIT </button> 
+                </div>
+                <div class="name last">
+                  <button id="clear" type="reset"> Clear </button> 
+                </div>
+            </form>
+    <script>
+      function validateform(){
+        var text="";
+        var regexemail=/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+        var x = /^\d{10}$/;
+        var a=document.getElementById("fname");
+        var b=document.getElementById("mname");
+        var c=document.getElementById("lname");
+        var d=document.getElementById("db");
+        var e=document.getElementById("texxt");
+        var f=document.getElementById("city");
+        var g=document.getElementById("state");
+         var h=document.getElementById("pin");
+         var i=document.getElementById("email").value;
+         var j=document.getElementById("pass");
+          var k=document.getElementById("cp");
+          var l=document.getElementById("course");
+          var phone=document.getElementById("phone").value;
+          var gender = document.querySelector('input[name="GENDER"]:checked');
+        if(a.value==""){
+            alert("enter firstname");
+            return false;
+        }
+        else if(b.value==""){
+            alert("enter middlename");
+            return false;
+        }
+        else if(c.value==""){
+            alert("enter lastname");
+            return false;
+        }
+        else if(d.value==""){
+            alert("enter dateofbirth");
+            return false;
+        }
+        else if(e.value==""){
+            alert("enter address");
+            return false;
+        }else if(phone==""){
+            alert("enter phone");
+            return false;
+         }
+        else if(f.value==""){
+            alert("enter city");
+            return false;
+      }
+      else if(g.value==""){
+            alert("enter state");
+            return false;
+      }
+      else if(h.value==""){
+            alert("enter pincode");
+            return false;
+        }
+        else if(i==""){
+            alert("enter email");
+            return false;
+        }
+        else if(j.value==""){
+            alert("enter password");
+            return false;
+        }
+        else if(!gender){
+            alert("select gender");
+            return false;
+        } else if(k.value!= j.value){
+            alert("passwords donot match");
+            return false;
+        }else if(l.value=="--select--"){
+            alert("select course!!");
+            return false;
+        }else if(x.test(!phone)){
+            document.getElementById("error2").innerHTML="Invalid Phone number";
+            return false;
+        }else if(!regexemail.test(i)){
+            document.getElementById("error1").innerHTML="Invalid email";
+            return false;
+        }
+        else{
+            alert("Registration Succesful!!!")
+            return true;
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="home1.css"> -->
+    <title>HOME</title>
+    <style>
+        .name{
+    position: relative;
+    animation-name: head;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes head{
+    from{
+        margin-left: 0px;
+    }to{
+        margin-left: 900px;
+    }
+}
+.name{
+    padding-top: 50px;
+    height: 150px;
+    color: black;
+    font-size: 5rem;
+    text-shadow: 5px 5px blue;
+}
+.nav{
+display: flex;
+align-items: center;
+justify-content: space-around;  
+width: 100%;
+height: 100px; 
+background-color: #374566;
+font-size: 2rem;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #374566;
+    color: black;
+    width: 10%;
+    height: 100px;
+    text-align: center;
+}
+.menu:hover{
+    background-color: black;
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+
+.main{
+    position: relative;
+}
+.imagee{
+filter: brightness(50%);
+}
+.collegename{
+    position: absolute;
+    top :600px;
+    left: 750px;
+    font-size: 10rem;
+    color: rgb(20, 18, 18);
+    color: white;
+}
+.collegename2{
+    margin-left: 200px;
+}
+.imgend{
+    margin-left: 200px;
+    margin-top: 300px;
+    font-size: 3rem;
+    color: cyan;
+}
+.info{
+    font-size: 2.5rem;
+    margin-left: 100px;
+    margin-right: 80px;
+}
+.hostels{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.vision{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.heading{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+}
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color:rgb(240, 253, 253);
+    /* height: 800px; */
+}
+.box{
+    width: 25%;
+    height: 1300px;
+    /* background-color: pink; */
+    /* padding: 20px 15px 15px; */
+}
+.img1{
+    background-image: url("https://stellamariscollege.edu.in/assets/news_files/images/Exchange%20program.jpg");
+    background-size: cover;
+    height: 70%;
+    margin-top: 70px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.img1:hover {
+    height: 72%;
+    width: 650px;
+    box-shadow: 3px 3px 3px 3px  grey;
+}
+.img2:hover {
+    height: 72%;
+    width: 650px;
+    box-shadow: 3px 3px 3px 3px grey;
+}
+.img3:hover {
+    height: 72%;
+    width: 650px;
+    /* transform: scale(1.2); */
+    box-shadow: 3px 3px 3px 3px grey;
+}
+.img4:hover {
+    height: 72%;
+    width: 650px;
+    /* transform: scale(1.2); */
+    box-shadow: 3px 3px 3px 3px grey;
+}
+.img2{
+    background-image: url("https://stellamariscollege.edu.in/assets/news_files/images/HUMAN%20CHAIN.png");
+    background-size: cover;
+    height: 70%;
+    margin-top: 70px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.img3{
+    background-image: url("https://stellamariscollege.edu.in/assets/news_files/images/Research_Matters_Series.jpg");
+    background-size: cover;
+    height: 70%;
+    margin-top: 70px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.img4{
+    background-image: url("https://stellamariscollege.edu.in/assets/news_files/images/Research_Matters_Series%20(2).jpg");
+    background-size: cover;
+    height: 70%;
+    margin-top: 70px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.b1info{
+    font-size: 2rem;
+}
+.contact{
+    background-color:#37475a;
+   color: white;
+    margin-top: 50px;
+    height: 400px;
+    margin-top: 90px;
+}
+.imgg :hover{
+    box-shadow: 25px;
+}
+.contact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.last{
+    font-size: 1.9rem;
+    margin-top: 50px;
+    list-style-type: none;
+}
+.firstcol{
+    font-size: 1.7rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.firstcol:hover{
+    color: grey;
+}
+.end{
+    height: 350px;
+    margin-top: 20px;
+    background-color: #35465b;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+
+}
+.clgname{
+    font-size: 2rem;
+    margin-top: 50px;
+}
+.rightprt{
+    margin-top: 50px;
+    text-align: right;
+    margin-right: 50px;
+    font-size: 1.5rem;
+}
+.lastimg{
+    margin-right: 50px;
+}
+.readmore{
+    color: blue;
+    text-decoration: underline;
+}
+.readmore:hover{
+    color: black;
+}
+.afoot:hover{
+    color: grey;
+}
+/* #preloader{
+        background:black url('preloader.gif') no-repeat center center ;
+        background-size: 6%; 
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+}
+.no-js #preloader {
+    display: none;
+} */
+   
+    </style>
+</head>
+<body>
+    <div id="preloader"></div>
+    <div class="name">STELLA MARIS COLLEGE</div>
+    <div class="header">
+        <div class="nav">
+            <div class="menu">
+               <a href="home.html">HOME</a> 
+            </div>    
+            <div class="menu"> <a href="student.html">STUDENT</a>  </div>
+            <div class="menu"><a href="faculty.html">FACULTY</a></div>
+            <!-- <div class="achieve">ACHIEVEMENTS</div> -->
+            <div class="menu"><a href="course&fee.html">COURSES </a></div>
+            <div class="menu" id="hostels"><a href="campus.html">CAMPUS LIFE</a></div>
+            <div class="menu"><a href="Gallery.html">GALLERY</a></div>
+            <div class="menu"><a href="abt.html">ABOUT US</a></div>
+        </div>
+     </div>
+    <div class="content">
+        <div class="main">
+            <img src="Banner_03.jpg" width="100%" height="1400px" class="imagee">
+          <div class="collegename">STELLA MARIS 
+              <div class="collegename2">COLLEGE</div>
+              
+          <div class="imgend">
+              College with potential for Excellence
+          </div>
+          </div>
+      </div>
+        <div class="info">
+            <p>INFORMATION</p>
+           1. Stella Maris College is an institution of higher education for women in Chennai, India. It is an autonomous college affiliated to the University of Madras and is partly residential. The college, which is under the direction of the Society of the Franciscan Missionaries of Mary, is a minority institution.
+            <br>
+          <div class="hostels">2. It has five hostels – Snehalaya, Our Lady's, Klemens, St. Josephs and Nava Nirmana.
+            </div> 
+            <div class="vision">VISION<br><br>
+The vision of the college is to build a vibrant and inclusive learning community in a culture of excellence sustained by a sound value system that promotes responsible citizenship and effects social change.
+            </div>
+            <div class="mission">
+                MISSION<br><br>
+
+The mission of the college is to empower young women to face the challenges of life with courage and commitment, to be builders of a humane and a just society, and to promote a learning community in which all, especially those from less-privileged backgrounds, feel part of the collaborative high quality educational process which is value based and leads to holistic growth.
+            </div>
+        </div>
+        <div class="announce">
+            <div class="heading">
+             <b>   LATEST NEWS AND ANNOUNCEMENTS </b>
+            </div>
+            <div class="boxes">
+                <div class="box1 box">
+                    <div class="img1 imgg"></div>
+                    <div class="b1info">
+                       <p><b>Stella Maris College </b></p> 
+                        <p style="color: rgb(100, 104, 104);"> Exchange program</p>
+                        <p>Students from SMC at the Le Tourneau University, Texas, US, participating in the Student Exchange Program.
+                        </p>
+                        <p> <a class="readmore" href="https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.thehindu.com/news/cities/chennai/18-mous-signed-at-icon-24-organised-by-stella-maris-college/article67815474.ece&ved=2ahUKEwjw06CSp5uFAxX3rlYBHfoKC-oQxfQBKAB6BAgTEAE&usg=AOvVaw1dRbOz75RXns7-gVnOCdhN">Read more</a></p>
+                    </div>
+                </div>
+                <div class="box2 box">
+                    <div class="img2 imgg">
+                    </div>
+                        <div class="b1info">
+                            <p><b>Stella Maris College </b></p> 
+                            <p style="color: rgb(100, 104, 104);"> Research Matters Series</p>
+                            <p>Stella Maris College organized Research Matters Series for the faculty of Sciences.  </p>
+                            <p> <a class="readmore" href="https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.thehindu.com/news/cities/chennai/18-mous-signed-at-icon-24-organised-by-stella-maris-college/article67815474.ece&ved=2ahUKEwjw06CSp5uFAxX3rlYBHfoKC-oQxfQBKAB6BAgTEAE&usg=AOvVaw1dRbOz75RXns7-gVnOCdhN">Read more</a></p>
+                    </div>
+                </div>
+                <div class="box3 box">
+                    <div class="img3 imgg"></div>
+                    <div class="b1info">
+                        <p><b>Stella Maris College </b></p> 
+                        <p style="color: rgb(100, 104, 104);"> Research Matters Series</p>
+                        <p>Research Matters Series for the faculty and researchers of the Department of Fine Arts.</p>
+                        <p> <a class="readmore" href="https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.thehindu.com/news/cities/chennai/18-mous-signed-at-icon-24-organised-by-stella-maris-college/article67815474.ece&ved=2ahUKEwjw06CSp5uFAxX3rlYBHfoKC-oQxfQBKAB6BAgTEAE&usg=AOvVaw1dRbOz75RXns7-gVnOCdhN">Read more</a></p>
+                    </div>
+                </div>
+                <div class="box4 box">
+                    <div class="img4 imgg"></div>
+                    <div class="b1info">
+                        <p><b>Stella Maris College </b></p> 
+                        <p style="color: rgb(48, 81, 81);"> Human Chain</p>
+                        <p>Human Chain to raise awareness on the rights of differently abled.</p>
+                        <p> <a class="readmore" href="https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.thehindu.com/news/cities/chennai/18-mous-signed-at-icon-24-organised-by-stella-maris-college/article67815474.ece&ved=2ahUKEwjw06CSp5uFAxX3rlYBHfoKC-oQxfQBKAB6BAgTEAE&usg=AOvVaw1dRbOz75RXns7-gVnOCdhN">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="contact">
+            <ul class="last">CENTERS
+                <li class="firstcol"><a class="afoot" href="campus.html">Women Studies</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">CGC</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">CRIST</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">SMCNC</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">SCEED</a></li>
+            </ul>
+            <ul class="last">ACADEMICS
+                <li class="firstcol"><a class="afoot" href="campus.html">Autonomy</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">Programmes</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">Departments</a></li>
+            </ul>
+          
+            <ul class="last">CAMPUS LIFE
+                <li class="firstcol"><a class="afoot" href="campus.html">Students' Union</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">Clubs</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">Grievance Redressal</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">Campus Map</a></li>
+            </ul>
+            <ul class="last">ABOUT
+                <li class="firstcol"><a class="afoot" href="abt.html">Foundress</a></li>
+                <li class="firstcol"><a class="afoot" href="abt.html">Institute</a></li>
+                <li class="firstcol"><a class="afoot" href="abt.html">Milestones</a></li>
+                <li class="firstcol"><a class="afoot" href="abt.html">Principal's Message</a></li>
+                <li class="firstcol"><a class="afoot" href="abt.html">Vision</a></li>
+            </ul>    
+        </div>
+        <div class="end">
+            <div class="clgname"> <img src="icon.png" height="100px" width="100px" class="image">STELLA MARIS COLLEGE</div>
+            <div class="rightprt">
+             <pre>-- This website has Special Accessibility Features.
+Highlight the text for voice-over. --
+
+© Copyright Stella Maris College
+17, Cathedral Road,Chennai - 600086
+</pre>   
+<img src="Instagram Logo.png" width="50px" height="50px" class="lastimg">
+<img src="facebook.png" width="50px" height="50px" class="lastimg">
+<img src="Youtube Logo.png" width="50px" height="50px" class="lastimg">
+<img src="TWITTER_NEW.jpg" width="50px" height="50px" class="lastimg">
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

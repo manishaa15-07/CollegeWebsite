@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLY</title>
+    <style>
+        .heading{
+            margin-top: 0px;
+            /* text-align: center; */
+            font-size: 3.5rem;
+            background-color: rgb(83, 215, 215);
+            padding-top: 50px;
+            height: 100px;
+            
+        }
+        .main{
+            text-align: center;
+             border: 3px solid black; 
+            width: 1100px;
+            height: 1760px;
+            margin-left: 800px;
+            /* margin: auto; */
+        }
+        .name{
+             /* margin-right: 200px;  */
+            margin-top: 90px;
+            font-size: 2rem;  
+        }
+        .ip{
+            /* width: 500px;
+            height: 60px;
+            font-size: 1.5rem;
+            margin-left: 20px; */
+            margin-left: 50px;
+            width: 400px;
+            height: 50px;
+            border: 2px solid rgb(146, 137, 137);
+            font-size: 30px; 
+        }
+        .gen{
+            transform: scale(2);
+           margin-left: 50px;
+           margin-right: 20px;
+           height: 20px;
+           /* height: 100px; */
+        }
+        #male{
+            margin-left: 100px;
+        }
+        .submit{
+            height: 100px;
+            width: 180px;
+            border-radius: 25px;
+            margin-right: 80px;
+        }
+        #sub{
+            background-color: rgb(207, 57, 57);
+        }
+        #clear{
+            background-color: rgb(210, 196, 196);
+        }
+        .error{
+            /* text-align: center; */
+            /* margin-left: 30px; */
+            font-size: 2.2rem;
+            margin-top: 0px;
+            color: rgb(142, 56, 56);
+        }
+    </style>
+</head>
+<body>
+    <form class="main">
+    <h1 class="heading">APPLICATION</h1>
+    <div class="name">FULLNAME :<input class="ip" id="ipname" type="text">
+        <p class="error" id="error1"></p>
+    </div>
+    <div class="name"> GENDER : <input class="gen" id="male" type="radio" name="gender" value="MALE">MALE
+          <input class="gen" id="female" type="radio" name="gender" value="FEMALE">FEMALE
+    </div>
+    <p class="error" id="error2"></p>
+    <div class="name">DATE OF BIRTH :<input type="date" class="ip" id="dateip"></div>
+    <p class="error" id="error3"></p>
+    <div class="name"> EMAIL : <input type="text" class="ip" id="emailip"></div>
+    <p class="error" id="error4"></p>
+    <div class="name">PHONE NO : <input type="text" class="ip" id="phone"></div>
+    <p class="error" id="error5"></p>
+    <div class="name">QUALIFICATION : <input type="text" class="ip" id="qualip"></div>
+    <p class="error" id="error6"></p>
+    <div class="name">EXPERIENCE : <input type="text" class="ip" id="exp"></div>
+    <p class="error" id="error7"></p>
+    <div class="name">INTEREST:
+        <select name ="course" class="ip" id="intip">
+            <option value="B.Sc">--select--</option>
+            <option value="B.Sc">B.Sc</option>
+             <option value="M.Sc" >M.Sc</option>
+             <option value="B.A">B.A</option>
+             <option value="B.Com">B.Com</option>
+             <option value="M.A">M.A</option>
+             <option value="B.Voc">B.Voc</option>
+             <option value="BCA">BCA</option>
+             <option value="MSW">MSW</option>
+             <option value="BBA">BBA</option>
+             <option value="M.Com">M.Com</option>
+             <option value="PG Diploma">PG Diploma</option>
+             <option value="Certificate">Certificate</option>
+             <option value="B.Com(HONS)">B.Com(Hons)</option>
+             <option value="BSW">BSW</option>
+          </select>
+    </div>
+    <p class="error" id="error8"></p>
+    <div class="name">SUBMIT RESUME : <input type="file" class="ip" id="fileip"></div>
+    <button class="submit name" type="submit" id="sub" onclick="return validateform()">SUBMIT</button>
+    <button class="submit name"  id="clear">CLEAR</button>
+</form>
+<script>
+    function validateform(){
+    var regexemail=/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+    var x = /^\d{10}$/;
+    var text="";
+    var na=document.getElementById("ipname").value;
+    var email=document.getElementById("emailip").value;
+    var phone=document.getElementById("phone").value;
+    var qual=document.getElementById("qualip").value;
+    var exp=document.getElementById("exp").value;
+    var gender = document.querySelector('input[name="gender"]:checked');
+    // var =document.getElementById("").value;
+    if(na==0){
+        text="Enter name";
+        document.getElementById("error1").innerHTML=text;
+        return false;
+    }else if(!gender){
+        text="Select gender";
+        document.getElementById("error2").innerHTML=text;
+        return false;
+    }
+    else if(email==0){
+        text="Enter email";
+        document.getElementById("error4").innerHTML=text;
+        return false;
+    }
+    else if(phone==0){
+        text="Enter phone number";
+        document.getElementById("error5").innerHTML=text;
+        return false;
+    }
+    else if(qual==0){
+        text="Enter qualification";
+        document.getElementById("error6").innerHTML=text;
+        return false;
+    }
+    else if(exp==0){
+        text="Enter details";
+        document.getElementById("error7").innerHTML=text;
+        return false;
+    }else if(!regexemail.test(email)){
+        alert("Invalid Email Id");
+    }else if(!x.test(phone)){
+        // document.getElementById("error2").innerHTML="Invalid Phone number";
+        alert("Invalid Phone number");
+        return false;
+    }else{
+        alert("form submitted successfully!!!");
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT</title>
+    <style>
+    .nameclg{
+        height: 120px;
+        padding-top: 20px;
+    color: black;
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: 5px 5px blue;
+}
+.nav{
+display: flex;
+align-items: center;
+justify-content: space-around;  
+width: 100%;
+height: 100px; 
+color: white;
+background-color:#374566;
+font-size: 2rem;
+/* margin-top: 50px; */
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #374566;
+    color: black;
+    width: 10%;
+    height: 100px;
+    text-align: center;
+}
+.menu:hover{
+    background-color: black;
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+        .login{
+            margin: auto;
+            margin-top: 100px;
+            width: 600px;
+            height: 900px;
+            border: 2px rgb(148, 148, 226) solid;
+          box-shadow: 3px 3px 3px 3px ;
+        }
+        .heading{
+            padding-top:50px ;
+            text-align: center;
+            font-size: 2.5rem;
+            background-color:rgb(83, 215, 215);
+            height: 100px;
+        }
+        .name{
+            /* margin-top: 300px; */
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 50px;
+            font-size: 2rem;
+        }
+        .input{
+            font-size: 1.6rem;
+            width: 400px;
+            height: 50px;
+        }
+        .input:hover{
+            border: 3px solid rgb(145, 145, 209);
+        }
+        .button{
+        margin-top: 30px;
+            font-size: 1.5rem;
+            margin-left: 100px;
+            width: 150px;
+            height: 80px;
+            background-color: rgb(83, 215, 215);
+            border-radius: 25px;
+        }
+        .last{
+            display: flex;
+        }
+        .changepass{
+            color: blue;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-left: 100px;
+        }
+        .error{
+            /* text-align: center; */
+            margin-left: 100px;
+            font-size: 1.9rem;
+            margin-top: 0px;
+            color: rgb(142, 56, 56);
+        }
+        .new{
+            margin-top: 50px;
+            text-align: right;
+            margin-right: 50px;
+        }
+        .neww{
+            color: #374566;
+            font-size: 2rem;
+            text-decoration: underline;
+        }
+        .neww:hover{
+            color: black;
+        }
+        #clear{
+            background-color: azure;
+        }
+        .afoot:hover{
+    color: grey;
+}
+    </style>
+</head>
+<body>
+    <div class="nameclg">STELLA MARIS COLLEGE</div>
+    <div class="header">
+        <div class="nav">
+            <div class="menu">
+               <a href="home.html">HOME</a> 
+            </div>    
+            <div class="menu"> <a href="student.html">STUDENT</a>  </div>
+            <div class="menu"><a href="faculty.html">FACULTY</a></div>
+            <!-- <div class="achieve">ACHIEVEMENTS</div> -->
+            <div class="menu"><a href="course&fee.html">COURSES </a></div>
+            <div class="menu" id="hostels"><a href="campus.html">CAMPUS LIFE</a></div>
+            <div class="menu"><a href="Gallery.html">GALLERY</a></div>
+            <div class="menu"><a href="abt.html">ABOUT US</a></div>
+        </div>
+     </div>
+     <div class="new"><a class="neww" href="studentregistration.html">NEW REGISTRATION</a></div>
+    <form class="login" id="log">
+        <div class="heading">STUDENT LOGIN</div>
+        <div class="name">
+        USERNAME :<br><br> <input type="text" class="input" id="name" placeholder="USERNAME"></div>
+        <p  class="error" id="error1"></p>
+       <div class="name">PASSWORD : <br> <br><input type="password" class="input" id="pass" placeholder="PASSWORD" ></div>
+       <p class="error" id="error2"></p>
+       <div class="last">
+       <button class="button" type="submit" onclick="return myfunc()">LOGIN</button>
+       <button class="button" id="clear" type="reset">CLEAR</button>
+       <!-- <div class="changepass">
+        Change/Reset password
+       </div> -->
+    </div>
+</form>
+    <script>
+        function myfunc(){
+            let text="";
+        var a=document.getElementById("name");
+        var b=document.getElementById("pass");
+      
+         if(a.value==0){
+           text="Enter username";
+           document.getElementById("error1").innerHTML=text;
+           return false;
+        }else if(b.value==0){
+            text="Enter password";
+            document.getElementById("error2").innerHTML=text;
+            return false;
+        }else if(a.value=="manisha" && b.value=="1234"){
+            window.location.href="home.html";
+            return false;
+         }else{
+            alert("Invalid details!!!");
+             return false;
+         }
+
+     }
+    </script>
+</body>
+</html>

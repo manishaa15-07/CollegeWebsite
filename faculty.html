@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACULTY</title>
+    <style>
+
+.name{
+    color: black;
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: 5px 5px blue;
+    /* position: sticky;
+    top: 0px; */
+}
+.nav{
+display: flex;
+align-items: center;
+justify-content: space-around;  
+width: 100%;
+height: 100px; 
+background-color:  #374566;
+font-size: 2rem;
+/* margin-top: 50px; */
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #374566;
+    color: white;
+    width: 10%;
+    height: 100px;
+    text-align: center;
+}
+.menu:hover{
+    background-color: black;
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+.heading{
+    padding-top: 50px;
+    font-size: 3rem;
+    text-align: center;
+    background-color: rgb(83, 215, 215);
+    height: 100px;
+}
+p{
+    font-size: 2rem;
+}
+.item{
+    font-size: 2.5rem;
+    color: rgb(24, 200, 200);
+}
+.con{
+    display: flex;
+    justify-content: space-evenly;
+}
+.chairman{
+    margin: 40px 20px 20px 20px;
+}
+.chair:hover{
+    box-shadow: 5px 5px 5px 5px rgb(42, 40, 40);
+}
+.para{
+    font-size: 2.5rem;
+    color: brown;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+h1{
+    font-size: 2.6rem;
+    color:lightcoral
+}
+.apply{
+    margin-top: 30px;
+    /* background-color: darkkhaki; */
+    text-align: center;
+}
+.applylink{
+    color: blue;
+    font-size: 2.5rem;
+    /* text-align: center; */
+}
+.applylink:hover{
+    color: green;
+}
+.contact{
+    background-color:#37475a;
+   color: white;
+    margin-top: 50px;
+    height: 400px;
+    margin-top: 90px;
+}
+.imgg :hover{
+    box-shadow: 25px;
+}
+.contact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.last{
+    font-size: 1.9rem;
+    margin-top: 50px;
+    list-style-type: none;
+}
+.firstcol{
+    font-size: 1.7rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.firstcol:hover{
+    color: grey;
+}
+.end{
+    margin-top: 20px;
+    color: white;
+    background-color: #37475a;
+    display: flex;
+    justify-content: space-around;
+
+}
+.clgname{
+    font-size: 2.5rem;
+    margin-top: 50px;
+}
+.rightprt{
+    margin-top: 50px;
+    text-align: right;
+    margin-right: 50px;
+    font-size: 1.5rem;
+}
+.lastimg{
+    margin-right: 50px;
+}
+.afoot:hover{
+    color: grey;
+}
+    </style>
+</head>
+<body>
+    <div class="name">STELLA MARIS COLLEGE</div>
+    <div class="header">
+        <div class="nav">
+            <div class="menu">
+               <a href="home.html">HOME</a> 
+            </div>    
+            <div class="menu"> <a href="student.html">STUDENT</a></div>
+            <div class="menu"><a href="faculty.html">FACULTY</a></div>
+            <!-- <div class="achieve">ACHIEVEMENTS</div> -->
+            <div class="menu"><a href="course&fee.html">COURSES </a></div>
+            <div class="menu" id="hostels"><a href="campus.html">CAMPUS LIFE</a></div>
+            <div class="menu"><a href="Gallery.html">GALLERY</a></div>
+            <div class="menu"><a href="abt.html">ABOUT US</a></div>
+        </div>
+     </div>
+     <div class="heading">ADMINISTRATION</div>
+     <div class="con">
+        <div class="chairman"><img class="chair" src="data:image/jpeg;base64,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" width="500px" height="500px">
+            <br>
+      <p class="para"> Chairman-Mr.Nazerath Charles </p> </div>
+      <div class="chairman"><img class="chair" src="Mdm.Stella.jpg" width="500px" height="500px">
+        <br>
+  <p class="para">Secretary
+    Mrs.Mary Stella Charles</p>  </div>
+  <div class="chairman"><img class="chair" src="sumii1.png" width="500px" height="500px">
+    <br>
+<p class="para">Vice Chairman
+    Mr.Sumitha C Judeson </p> </div>
+<div class="chairman"><img  class="chair" src="judeson3.jpg" width="500px" height="500px">
+    <br>
+<p class="para"> Chief Executive officer
+    Mr.Carol Judeson </p> </div>
+     </div>
+     <div class="heading">LIST OF FACULTY</div>
+    <div class="content">
+        <div class="list" id="list1">
+            <h1>B.Com</h1>
+            <ul class="unordered">
+            <li class="item">Ashaa Johns</li>
+            <p>M.A.( History),MA (International Relations),B.L.,Post Graduate Dip in Int.Business Law(PGDIBL)</p>
+             <p>Assistant Professor</p>
+
+             <li class="item">Ms. Abirami D</li>
+             <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+             <p>Assistant Professor
+            </p>
+            
+            <li class="item">Ms. Abirami D</li>
+            <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+            <p>Assistant Professor
+           </p>
+
+           <li class="item">Ms. Abirami D</li>
+           <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+           <p>Assistant Professor
+          </p>
+
+          <li class="item">Ms. Abirami D</li>
+          <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+          <p>Assistant Professor
+         </p>
+
+         <li class="item">Ms. Abirami D</li>
+         <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+         <p>Assistant Professor
+        </p>
+            </ul>
+        </div>
+        <div class="list" id="list1">
+            <h1>B.Com</h1>
+            <ul class="unordered">
+            <li class="item">Ashaa Johns</li>
+            <p>M.A.( History),MA (International Relations),B.L.,Post Graduate Dip in Int.Business Law(PGDIBL)</p>
+             <p>Assistant Professor</p>
+
+             <li class="item">Ms. Abirami D</li>
+             <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+             <p>Assistant Professor
+            </p>
+            
+            <li class="item">Ms. Abirami D</li>
+            <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+            <p>Assistant Professor
+           </p>
+
+           <li class="item">Ms. Abirami D</li>
+           <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+           <p>Assistant Professor
+          </p>
+
+          <li class="item">Ms. Abirami D</li>
+          <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+          <p>Assistant Professor
+         </p>
+
+         <li class="item">Ms. Abirami D</li>
+         <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+         <p>Assistant Professor
+        </p>
+            </ul>
+        </div>
+        <div class="list" id="list1">
+            <h1>B.Com</h1>
+            <ul class="unordered">
+            <li class="item">Ashaa Johns</li>
+            <p>M.A.( History),MA (International Relations),B.L.,Post Graduate Dip in Int.Business Law(PGDIBL)</p>
+             <p>Assistant Professor</p>
+
+             <li class="item">Ms. Abirami D</li>
+             <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+             <p>Assistant Professor
+            </p>
+            
+            <li class="item">Ms. Abirami D</li>
+            <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+            <p>Assistant Professor
+           </p>
+
+           <li class="item">Ms. Abirami D</li>
+           <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+           <p>Assistant Professor
+          </p>
+
+          <li class="item">Ms. Abirami D</li>
+          <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+          <p>Assistant Professor
+         </p>
+
+         <li class="item">Ms. Abirami D</li>
+         <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+         <p>Assistant Professor
+        </p>
+            </ul>
+        </div>
+        <div class="list" id="list1">
+            <h1>B.Com</h1>
+            <ul class="unordered">
+            <li class="item">Ashaa Johns</li>
+            <p>M.A.( History),MA (International Relations),B.L.,Post Graduate Dip in Int.Business Law(PGDIBL)</p>
+             <p>Assistant Professor</p>
+
+             <li class="item">Ms. Abirami D</li>
+             <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+             <p>Assistant Professor
+            </p>
+            
+            <li class="item">Ms. Abirami D</li>
+            <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+            <p>Assistant Professor
+           </p>
+
+           <li class="item">Ms. Abirami D</li>
+           <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+           <p>Assistant Professor
+          </p>
+
+          <li class="item">Ms. Abirami D</li>
+          <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+          <p>Assistant Professor
+         </p>
+
+         <li class="item">Ms. Abirami D</li>
+         <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+         <p>Assistant Professor
+        </p>
+            </ul>
+        </div>
+        <div class="list" id="list1">
+            <h1>B.Com</h1>
+            <ul class="unordered">
+            <li class="item">Ashaa Johns</li>
+            <p>M.A.( History),MA (International Relations),B.L.,Post Graduate Dip in Int.Business Law(PGDIBL)</p>
+             <p>Assistant Professor</p>
+
+             <li class="item">Ms. Abirami D</li>
+             <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+             <p>Assistant Professor
+            </p>
+            
+            <li class="item">Ms. Abirami D</li>
+            <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+            <p>Assistant Professor
+           </p>
+
+           <li class="item">Ms. Abirami D</li>
+           <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+           <p>Assistant Professor
+          </p>
+
+          <li class="item">Ms. Abirami D</li>
+          <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+          <p>Assistant Professor
+         </p>
+
+         <li class="item">Ms. Abirami D</li>
+         <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+         <p>Assistant Professor
+        </p>
+            </ul>
+        </div>
+        <div class="list" id="list1">
+            <h1>B.Com</h1>
+            <ul class="unordered">
+            <li class="item">Ashaa Johns</li>
+            <p>M.A.( History),MA (International Relations),B.L.,Post Graduate Dip in Int.Business Law(PGDIBL)</p>
+             <p>Assistant Professor</p>
+
+             <li class="item">Ms. Abirami D</li>
+             <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+             <p>Assistant Professor
+            </p>
+            
+            <li class="item">Ms. Abirami D</li>
+            <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+            <p>Assistant Professor
+           </p>
+
+           <li class="item">Ms. Abirami D</li>
+           <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+           <p>Assistant Professor
+          </p>
+
+          <li class="item">Ms. Abirami D</li>
+          <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+          <p>Assistant Professor
+         </p>
+
+         <li class="item">Ms. Abirami D</li>
+         <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+         <p>Assistant Professor
+        </p>
+            </ul>
+        </div>
+        <div class="list" id="list1">
+            <h1>B.Com</h1>
+            <ul class="unordered">
+            <li class="item">Ashaa Johns</li>
+            <p>M.A.( History),MA (International Relations),B.L.,Post Graduate Dip in Int.Business Law(PGDIBL)</p>
+             <p>Assistant Professor</p>
+
+             <li class="item">Ms. Abirami D</li>
+             <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+             <p>Assistant Professor
+            </p>
+            
+            <li class="item">Ms. Abirami D</li>
+            <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+            <p>Assistant Professor
+           </p>
+
+           <li class="item">Ms. Abirami D</li>
+           <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+           <p>Assistant Professor
+          </p>
+
+          <li class="item">Ms. Abirami D</li>
+          <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+          <p>Assistant Professor
+         </p>
+
+         <li class="item">Ms. Abirami D</li>
+         <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+         <p>Assistant Professor
+        </p>
+            </ul>
+        </div>
+        <div class="list" id="list1">
+            <h1>B.Com</h1>
+            <ul class="unordered">
+            <li class="item">Ashaa Johns</li>
+            <p>M.A.( History),MA (International Relations),B.L.,Post Graduate Dip in Int.Business Law(PGDIBL)</p>
+             <p>Assistant Professor</p>
+
+             <li class="item">Ms. Abirami D</li>
+             <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+             <p>Assistant Professor
+            </p>
+            
+            <li class="item">Ms. Abirami D</li>
+            <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+            <p>Assistant Professor
+           </p>
+
+           <li class="item">Ms. Abirami D</li>
+           <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+           <p>Assistant Professor
+          </p>
+
+          <li class="item">Ms. Abirami D</li>
+          <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+          <p>Assistant Professor
+         </p>
+
+         <li class="item">Ms. Abirami D</li>
+         <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+         <p>Assistant Professor
+        </p>
+            </ul>
+        </div>
+        <div class="list" id="list1">
+            <h1>B.Com</h1>
+            <ul class="unordered">
+            <li class="item">Ashaa Johns</li>
+            <p>M.A.( History),MA (International Relations),B.L.,Post Graduate Dip in Int.Business Law(PGDIBL)</p>
+             <p>Assistant Professor</p>
+
+             <li class="item">Ms. Abirami D</li>
+             <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+             <p>Assistant Professor
+            </p>
+            
+            <li class="item">Ms. Abirami D</li>
+            <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+            <p>Assistant Professor
+           </p>
+
+           <li class="item">Ms. Abirami D</li>
+           <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+           <p>Assistant Professor
+          </p>
+
+          <li class="item">Ms. Abirami D</li>
+          <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+          <p>Assistant Professor
+         </p>
+
+         <li class="item">Ms. Abirami D</li>
+         <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+         <p>Assistant Professor
+        </p>
+            </ul>
+        </div>
+        <div class="list" id="list1">
+            <h1>B.Com</h1>
+            <ul class="unordered">
+            <li class="item">Ashaa Johns</li>
+            <p>M.A.( History),MA (International Relations),B.L.,Post Graduate Dip in Int.Business Law(PGDIBL)</p>
+             <p>Assistant Professor</p>
+
+             <li class="item">Ms. Abirami D</li>
+             <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+             <p>Assistant Professor
+            </p>
+            
+            <li class="item">Ms. Abirami D</li>
+            <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+            <p>Assistant Professor
+           </p>
+
+           <li class="item">Ms. Abirami D</li>
+           <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+           <p>Assistant Professor
+          </p>
+
+          <li class="item">Ms. Abirami D</li>
+          <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+          <p>Assistant Professor
+         </p>
+
+         <li class="item">Ms. Abirami D</li>
+         <p>M.A.(Corp.Sec.)., M.Phil.(Com.)., M.B.A., M.Phil.(Corp.Sec)., SET., (Ph.D )</p>
+         <p>Assistant Professor
+        </p>
+            </ul>
+        </div>
+    </div>
+ <div class="apply">
+    <a class="applylink" href="apply.html">CLICK HERE TO APPLY</a>
+ </div>
+
+    <footer>
+        <div class="contact">
+            <ul class="last">CENTERS
+                <li class="firstcol"><a class="afoot" href="campus.html">Women Studies</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">CGC</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">CRIST</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">SMCNC</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">SCEED</a></li>
+            </ul>
+            <ul class="last">ACADEMICS
+                <li class="firstcol"><a class="afoot" href="campus.html">Autonomy</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">Programmes</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">Departments</a></li>
+            </ul>
+          
+            <ul class="last">CAMPUS LIFE
+                <li class="firstcol"><a class="afoot" href="campus.html">Students' Union</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">Clubs</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">Grievance Redressal</a></li>
+                <li class="firstcol"><a class="afoot" href="campus.html">Campus Map</a></li>
+            </ul>
+            <ul class="last">ABOUT
+                <li class="firstcol"><a class="afoot" href="abt.html">Foundress</a></li>
+                <li class="firstcol"><a class="afoot" href="abt.html">Institute</a></li>
+                <li class="firstcol"><a class="afoot" href="abt.html">Milestones</a></li>
+                <li class="firstcol"><a class="afoot" href="abt.html">Principal's Message</a></li>
+                <li class="firstcol"><a class="afoot" href="abt.html">Vision</a></li>
+            </ul>    
+        </div>
+        <div class="end">
+            <div class="clgname"><img src="icon.png" height="100px" width="100px" class="image">STELLA MARIS COLLEGE</div>
+            <div class="rightprt">
+             <pre>-- This website has Special Accessibility Features.
+Highlight the text for voice-over. --
+
+© Copyright Stella Maris College
+17, Cathedral Road,Chennai - 600086
+</pre>   
+<img src="Instagram Logo.png" width="50px" height="50px" class="lastimg">
+<img src="facebook.png" width="50px" height="50px" class="lastimg">
+<img src="Youtube Logo.png" width="50px" height="50px" class="lastimg">
+<img src="TWITTER_NEW.jpg" width="50px" height="50px" class="lastimg">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
